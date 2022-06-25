@@ -77,6 +77,8 @@ namespace Замена_Ссылки_В_Столбце_V5
                                 //string responseUri = response.RequestMessage.RequestUri.ToString();
                                 string responseUri = response.Headers.Location.ToString();
 
+
+                                col.Value = responseUri;
                                 col.Hyperlink.ExternalAddress = new Uri(responseUri);
                             }
                         });
